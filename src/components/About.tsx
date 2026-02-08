@@ -8,7 +8,7 @@ const About = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end start"]
+        offset: ["start end", "end start"]     sdhfsdh
     });         
 
     const yHeader = useTransform(scrollYProgress, [0, 1], [0, -100]);
