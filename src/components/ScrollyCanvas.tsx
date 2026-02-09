@@ -82,6 +82,8 @@ const ScrollyCanvas = () => {
             }
 
             context.clearRect(0, 0, canvasWidth, canvasHeight);
+            context.imageSmoothingEnabled = true;
+            context.imageSmoothingQuality = 'high';
             context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
         };
 
@@ -99,8 +101,9 @@ const ScrollyCanvas = () => {
     useEffect(() => {
         const resizeCanvas = () => {
             if (canvasRef.current) {
-                canvasRef.current.width = window.innerWidth;
-                canvasRef.current.height = window.innerHeight;
+                const dpr = window.devicePixelRatio || 1;
+                canvasRef.current.width = window.innerWidth * dpr;
+                canvasRef.current.height = window.innerHeight * dpr;
 
                 // Redraw after resize
                 const currentIndex = Math.round(frameIndex.get());
@@ -129,6 +132,8 @@ const ScrollyCanvas = () => {
                         }
 
                         context.clearRect(0, 0, canvasWidth, canvasHeight);
+                        context.imageSmoothingEnabled = true;
+                        context.imageSmoothingQuality = 'high';
                         context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
                     }
                 }
