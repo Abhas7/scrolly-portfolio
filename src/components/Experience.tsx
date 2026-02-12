@@ -23,7 +23,7 @@ const CERTIFICATES = [
     {
         title: "TCS Young Professional",
         issuer: "TCS",
-        link: "#"
+        link: "#"   
     }
 ];
 
