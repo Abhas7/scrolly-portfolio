@@ -15,10 +15,10 @@ const PROJECTS = [
         category: "AI Agent"
     },
     {
-        title: "Quick Blog",
+        title: "BLOGGERR",
         id: "02",
         description: "AI-powered platform generating context-aware blog posts instantly using LLM orchestration.",
-        tags: ["React", "Express", "Gemini AI"],
+        tags: ["React", "Express", "OpenRouter"],
         link: "https://github.com/Abhas7",
         github: "https://github.com/Abhas7",
         category: "Automation"
